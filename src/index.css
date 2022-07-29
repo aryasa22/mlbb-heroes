@@ -1,13 +1,242 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* Universal Styling */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.loading-text {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.App {
+  background-image: url("./wallpaperflare.com_wallpaper.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-color: rgba(58, 41, 207, 0.5);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 1rem 3rem;
+}
+
+.navbar-brand {
+  font-family: "Carter One", cursive;
+}
+
+/* Home Page Styling */
+.home-page {
+  padding: 2rem 3rem;
+  flex-grow: 1;
+  display: grid;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  margin: auto;
+  gap: 3rem 8rem;
+}
+
+.category {
+  background: rgba(161, 4, 174, 0.8);
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hero List Styling */
+
+.page {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+}
+
+.hero-list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  margin: auto;
+  gap: 2rem 5rem;
+}
+
+.hero-card {
+  background: rgba(161, 4, 174, 0.8);
+  display: flex;
+  padding: 0.5rem;
+  gap: 2rem;
+  border-radius: 10px;
+}
+
+.card-img img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.desc-val {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Hero Detail Page Styling */
+.detail-card {
+  margin: auto;
+  z-index: 1;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  background: rgba(161, 4, 174, 0.8);
+  gap: 2rem;
+  border-radius: 20px;
+  height: 360px;
+}
+
+.detail-card-img {
+  overflow: hidden;
+  text-align: center;
+}
+
+.detail-card-img img {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.detail-card-desc {
+  padding: 1rem;
+}
+
+.detail-card-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icons button {
+  background: none;
+  border: none;
+}
+
+.skill-icons img {
+  width: 50px;
+}
+
+.counters-name {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal {
+  position: absolute;
+  width: 350px;
+  background: rgba(41, 4, 109, 0.8);
+  padding: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.7),
+    0 4px 8px rgba(0, 0, 0, 0.7), 0 8px 16px rgba(0, 0, 0, 0.7),
+    0 16px 32px rgba(0, 0, 0, 0.7), 0 32px 64px rgba(0, 0, 0, 0.7);
+}
+
+.modal button {
+  margin-left: auto;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: red;
+  background: none;
+  border: 1px solid red;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin-bottom: 1rem;
+}
+
+/* Media Query */
+
+@media (max-width: 960px) {
+  .hero-list {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .page {
+    padding: 2rem;
+  }
+
+  .hero-list {
+    grid-template-columns: 300px;
+  }
+
+  .card-img img {
+    width: 70px;
+  }
+
+  .categories {
+    grid-template-columns: 250px;
+  }
+
+  .detail-card {
+    grid-template-columns: 300px;
+    border-radius: 10px;
+    height: fit-content;
+    gap: 0.5rem;
+    margin-top: 0rem;
+  }
+
+  .detail-card-img {
+    height: 200px;
+  }
+
+  .detail-card-img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    object-position: top;
+  }
 }
