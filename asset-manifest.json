@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mlbb-heroes/static/css/main.d9eb3827.css",
+    "main.js": "/mlbb-heroes/static/js/main.d75d3e5e.js",
+    "static/media/wallpaperflare.com_wallpaper.jpg": "/mlbb-heroes/static/media/wallpaperflare.com_wallpaper.2397e12c349c934b471f.jpg",
+    "index.html": "/mlbb-heroes/index.html",
+    "main.d9eb3827.css.map": "/mlbb-heroes/static/css/main.d9eb3827.css.map",
+    "main.d75d3e5e.js.map": "/mlbb-heroes/static/js/main.d75d3e5e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9eb3827.css",
+    "static/js/main.d75d3e5e.js"
+  ]
+}
